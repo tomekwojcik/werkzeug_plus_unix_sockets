@@ -1,0 +1,6 @@
+Werkzeug + Unix sockets is written and maintained by Tomasz Wójcik.
+
+Portions of this code were taken from Werkzeug source code which is BSD
+licensed with the following copyrights:
+
+ - (c) 2011 by the Werkzeug Team
