@@ -19,7 +19,7 @@ First, install the module:
 
 .. sourcecode:: console
 
-    $ pip install git+git@github.com:tomekwojcik/werkzeug_plus_unix_sockets.git
+    $ pip install git+git://github.com/tomekwojcik/werkzeug_plus_unix_sockets.git
 
 Then, adapt your app to use it:
 

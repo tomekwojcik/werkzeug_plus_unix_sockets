@@ -14,6 +14,7 @@ import socket
 import werkzeug.serving
 
 __all__ = ['patch_werkzeug']
+__version__ = '0.1'
 
 CLIENT_ADDRESS = ('<local>', 0)
 

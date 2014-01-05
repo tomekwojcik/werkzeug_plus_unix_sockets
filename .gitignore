@@ -1,3 +1,6 @@
 *.pyc
 *.pyo
-test_app.dev.sock
+build/
+dist/
+werkzeug_plus_unix_sockets.egg-info/
+MANIFEST
