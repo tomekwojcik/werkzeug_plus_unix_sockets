@@ -13,7 +13,6 @@ sys.path.insert(0, '.')
 from flask import Flask
 
 app = Flask(__name__)
-app.debug = True
 
 
 @app.route('/')
@@ -21,6 +20,12 @@ def app_index():
     return 'Hello, World!'
 
 if __name__ == '__main__':
-    from werkzeug_unix_sock import patch_werkzeug
-    patch_werkzeug()
-    app.run('test_app.dev.sock')
+    app.debug = True
+
+    try:
+        from werkzeug_unix_sock import patch_werkzeug
+    except ImportError:
+        app.run() # Falling back to TCP socket.
+    else:
+        patch_werkzeug()
+        app.run('/tmp/unix_sock_demo.app.sock') # Using Unix socket.
